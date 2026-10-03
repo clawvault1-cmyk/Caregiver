@@ -1,29 +1,18 @@
 # Parent Care File
 
-A static page for a paper file an adult child fills in for a parent. The first screen is a sample one-page brief, set in type, with the price and one button.
+A static page for an adult child taking care of a parent. The first screen is the night someone else has to take over, the price, and one button. The file itself is not shown.
 
-Helen Ward, the doses, the doctor, and the insurance line are made up. Each sample sheet is marked SAMPLE. The page is not medical advice, not a medical device, and not a clinic.
+$97 for the whole file. Separately: Medication & Daily Log $37, Doctor & Insurance Sheet $32, One-Page ER Brief $37. Together those three are $106.
 
-No build step. The folder is the site.
-
-## Offers
-
-| File | Price |
-| --- | --- |
-| Parent Care File | $97 |
-| Medication & Daily Log | $37 |
-| Doctor & Insurance Sheet | $32 |
-| One-Page ER Brief | $37 |
-
-The three files separately are $37 + $32 + $37 = $106.
+It is not medical advice, not a device, and not a clinic.
 
 ## Checkout
 
-Edit `checkout.config.js`. Each value is a checkout URL and starts as an empty string. Paste a full `https://` link for each file. Buttons open that URL. There is no card form on this page.
+Edit `checkout.config.js`. Each value starts as an empty string. Paste a full `https://` link for each file. There is no card form on this page.
 
 ## Publish
 
-Host this folder on any static host. `.nojekyll` is included so GitHub Pages serves the files as they are.
+Host this folder as static files. `.nojekyll` is included for GitHub Pages.
 
 ```bash
 python3 -m http.server 8080

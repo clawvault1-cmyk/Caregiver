@@ -7,11 +7,10 @@
 }
 
 :root {
-  color-scheme: light;
-  --ink: #1c1915;
-  --paper: #fffcf7;
-  --cream: #f3eee4;
-  --line: rgba(28, 25, 21, 0.16);
+  color-scheme: dark;
+  --ink: #f3efe6;
+  --ground: #100f0d;
+  --quiet: #c9c2b6;
 }
 
 *,
@@ -20,173 +19,85 @@
   box-sizing: border-box;
 }
 
-html {
-  background: var(--cream);
+html,
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
 }
 
 body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--ink);
   font-family: "Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
-  font-size: 16px;
+  font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.45;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background: var(--ink);
-  color: var(--paper);
+  color: var(--ground);
 }
 
-.wrap {
+main {
   max-width: 28rem;
   margin: 0 auto;
-  padding: max(0.75rem, env(safe-area-inset-top)) max(0.85rem, env(safe-area-inset-right)) max(2.5rem, env(safe-area-inset-bottom)) max(0.85rem, env(safe-area-inset-left));
+}
+
+.hero {
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.15rem max(1.25rem, env(safe-area-inset-bottom));
 }
 
 h1 {
-  margin: 0 0 0.55rem;
-  font-size: 17px;
+  margin: 0 0 1.75rem;
+  font-size: 3.45rem;
+  font-weight: 560;
+  line-height: 0.96;
+  letter-spacing: -0.038em;
+}
+
+h2 {
+  margin: 0 0 1.15rem;
+  font-size: 2.15rem;
+  font-weight: 560;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
-h2 {
-  margin: 0 0 0.45rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
 p {
-  margin: 0 0 0.7rem;
-}
-
-.paper {
-  position: relative;
-  background: var(--paper);
-  color: var(--ink);
-  border: 1px solid rgba(28, 25, 21, 0.22);
-  padding: 1.25rem 0.85rem 0.65rem;
-}
-
-.corner {
-  position: absolute;
-  top: 0.4rem;
-  right: 0.5rem;
-  margin: 0;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1;
-}
-
-.sample {
-  margin: 0 0 0.45rem;
-  padding-right: 4.2rem;
-  font-size: 15px;
-  line-height: 1.35;
-}
-
-.sheet-label {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.person {
-  margin: 0.1rem 0 0.3rem;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.allergy {
-  margin: 0.3rem 0 0.35rem;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 1.28;
-}
-
-.meds {
-  list-style: none;
-  margin: 0 0 0.45rem;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.35;
-}
-
-.meds li {
-  padding: 0.22rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.meds li:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.drug {
-  font-weight: 600;
-}
-
-.dose {
-  font-weight: 400;
-}
-
-.meta,
-.dated {
-  margin: 0 0 0.28rem;
-  font-size: 15px;
-  line-height: 1.32;
-}
-
-.dated {
-  margin-bottom: 0;
-}
-
-.hero .price {
-  margin: 0.45rem 0 0.3rem;
+  margin: 0 0 1rem;
 }
 
 .price {
-  margin: 0.35rem 0 0.4rem;
-  font-size: 1.75rem;
-  font-weight: 600;
+  margin: 0 0 0.9rem;
+  font-size: 2.75rem;
+  font-weight: 560;
   line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.price.quiet {
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.sum {
-  margin: 0.45rem 0 0;
-  font-size: 14px;
-  line-height: 1.35;
+  letter-spacing: -0.04em;
 }
 
 .button {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--ink);
+  padding: 0.95rem 1rem;
+  border: 0;
   border-radius: 0;
   background: var(--ink);
-  color: var(--paper);
-  font: 600 16px/1.2 "Source Serif 4", "Iowan Old Style", Palatino, Georgia, serif;
+  color: var(--ground);
+  font: 600 1.05rem/1.2 "Source Serif 4", Palatino, Georgia, serif;
   text-align: center;
   cursor: pointer;
   touch-action: manipulation;
@@ -197,17 +108,8 @@ p {
 .button.quiet {
   background: transparent;
   color: var(--ink);
+  border: 1px solid rgba(243, 239, 230, 0.45);
   font-weight: 500;
-}
-
-.button:active {
-  background: #000;
-  color: var(--paper);
-}
-
-.button.quiet:active {
-  background: var(--ink);
-  color: var(--paper);
 }
 
 .button:focus-visible {
@@ -215,231 +117,79 @@ p {
   outline-offset: 3px;
 }
 
+.button:active {
+  background: #fff;
+}
+
+.button.quiet:active {
+  background: var(--ink);
+  color: var(--ground);
+}
+
 .checkout-note {
   margin: 0;
   min-height: 0;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
+  color: var(--quiet);
 }
 
 .checkout-note:not(:empty) {
-  margin-top: 0.55rem;
+  margin-top: 0.75rem;
 }
 
-.visit,
-.crop,
-.page,
-.fan,
-.offers,
-.after {
-  margin-top: 2.75rem;
+.cost,
+.relief,
+.pieces,
+footer {
+  padding: 4.5rem 1.25rem 0;
 }
 
-.visit h2 {
+.cost p,
+.relief p {
   font-size: 1.35rem;
-}
-
-.crop {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.crop .allergy {
-  font-size: 24px;
-  line-height: 1.25;
-}
-
-.meds.large {
-  font-size: 20px;
-  line-height: 1.35;
-}
-
-.meds.large li {
-  padding: 0.4rem 0;
-}
-
-figcaption {
-  margin-top: 0.7rem;
-  font-size: 16px;
   line-height: 1.4;
 }
 
-.records,
-.lines {
-  list-style: none;
+.pieces {
+  padding-bottom: 1rem;
+}
+
+.pieces article {
+  padding: 1.35rem 0;
+  border-top: 1px solid rgba(243, 239, 230, 0.16);
+}
+
+.amount {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sum {
+  margin: 0.5rem 0 0;
+  color: var(--quiet);
+  font-size: 1rem;
+}
+
+footer {
+  padding-bottom: max(3rem, env(safe-area-inset-bottom));
+}
+
+footer p {
   margin: 0;
-  padding: 0;
-}
-
-.records li {
-  margin: 0;
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--line);
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.records li:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.records p {
-  margin: 0 0 0.15rem;
-}
-
-.lines li {
-  margin: 0;
-  padding: 0.85rem 0 0.45rem;
-  border-bottom: 1px solid var(--ink);
-  font-size: 16px;
+  color: var(--quiet);
+  font-size: 1rem;
   line-height: 1.45;
-  min-height: 2.6rem;
-}
-
-.lines li.blank {
-  min-height: 2.8rem;
-}
-
-.next {
-  margin: 0.9rem 0 0;
-  padding-bottom: 1.4rem;
-  border-bottom: 1px solid var(--ink);
-  font-size: 16px;
-}
-
-dl {
-  margin: 0;
-}
-
-dl div {
-  padding: 0.55rem 0;
-  border-top: 1px solid var(--line);
-}
-
-dl div:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-dt {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-dd {
-  margin: 0.1rem 0 0;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.foot {
-  margin: 0.75rem 0 0;
-  font-size: 16px;
-}
-
-.fan {
-  position: relative;
-  margin-top: 2.75rem;
-  padding-top: 1.15rem;
-}
-
-.peek {
-  height: 2.15rem;
-  margin: 0 0.55rem -1px;
-  padding: 0.45rem 0.75rem 0;
-  overflow: hidden;
-  border: 1px solid rgba(28, 25, 21, 0.22);
-  border-bottom: 0;
-  background: #f7f3ea;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.peek + .peek {
-  margin-top: 0.35rem;
-}
-
-.fan .top {
-  position: relative;
-  z-index: 1;
-}
-
-.fan-med {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.35;
-}
-
-.offer {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
-}
-
-.offer p {
-  margin-bottom: 0.35rem;
-  font-size: 16px;
-}
-
-.offer.whole {
-  margin-top: 2.25rem;
-}
-
-.boundary {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.45;
-}
-
-.after p {
-  font-size: 16px;
-  line-height: 1.45;
-}
-
-@media (min-height: 800px) {
-  .brief {
-    padding-top: 1.7rem;
-    padding-bottom: 1rem;
-  }
-
-  .brief .meds li {
-    padding: 0.48rem 0;
-  }
-
-  .brief .meta,
-  .brief .dated {
-    margin-bottom: 0.5rem;
-  }
-
-  .brief .allergy {
-    margin-top: 0.55rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .hero .price {
-    margin-top: 0.85rem;
-  }
 }
 
 @media (min-width: 48rem) {
-  .wrap {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
+  main {
+    max-width: 36rem;
   }
 
-  .visit,
-  .crop,
-  .page,
-  .fan,
-  .offers,
-  .after {
-    margin-top: 4rem;
-  }
-}
-
-@media (forced-colors: active) {
-  .button {
-    border: 1px solid ButtonText;
+  h1 {
+    font-size: 4.25rem;
   }
 }
