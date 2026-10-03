@@ -39,15 +39,20 @@ body {
   color: var(--cream);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .wrap {
   max-width: 34rem;
   margin: 0 auto;
-  padding: max(1.35rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(3.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+  padding: max(1.1rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(3.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
 }
 
 .masthead {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.85rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -68,39 +73,61 @@ p {
 }
 
 h1 {
-  margin: 1.35rem 0 1rem;
-  font-size: 1.8rem;
+  margin: 0.95rem 0 0.45rem;
+  font-size: 1.62rem;
   font-weight: 500;
-  line-height: 1.22;
+  line-height: 1.18;
   letter-spacing: -0.015em;
-  text-wrap: balance;
 }
 
 h2 {
-  margin: 0 0 2.25rem;
-  font-size: 1.45rem;
+  margin: 0 0 2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.25;
 }
 
 h3 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.7rem;
   font-size: 1.28rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
 .who,
-.what {
-  margin: 0 0 0.8rem;
+.what,
+.keep {
+  margin: 0 0 0.75rem;
+}
+
+.hero .who {
+  margin: 0 0 0.15rem;
 }
 
 .what {
   margin-bottom: 0;
 }
 
+.cover {
+  display: block;
+  width: auto;
+  max-width: min(15.5rem, 68%);
+  max-height: clamp(9.5rem, 28vh, 15.5rem);
+  margin: 0.7rem auto 0.15rem;
+  object-fit: contain;
+  box-shadow: 0 16px 36px rgba(19, 32, 51, 0.16);
+}
+
+.still {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem;
+  box-shadow: 0 12px 30px rgba(19, 32, 51, 0.1);
+}
+
 .price {
-  margin: 1.3rem 0 0.35rem;
+  margin: 0.75rem 0 0.25rem;
   font-size: 1.85rem;
   font-weight: 500;
   line-height: 1.1;
@@ -108,9 +135,9 @@ h3 {
 }
 
 .sum {
-  margin: 0 0 1.15rem;
-  font-size: 1rem;
-  line-height: 1.45;
+  margin: 0 0 0.8rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
 }
 
 .button {
@@ -156,32 +183,37 @@ h3 {
   margin-top: 0.85rem;
 }
 
+.inside {
+  margin-top: 3.25rem;
+}
+
+.keep {
+  margin-top: 0.15rem;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+
 .singles,
 .again,
 footer {
-  margin-top: 6.5rem;
-}
-
-/* Keep the $97 offer alone on the first phone screen. */
-.singles {
-  margin-top: max(6.5rem, calc(100svh - 32rem));
+  margin-top: 4.75rem;
 }
 
 .singles .offer + .offer {
-  margin-top: 3.25rem;
-  padding-top: 3.25rem;
+  margin-top: 3.15rem;
+  padding-top: 3.15rem;
   border-top: 1px solid var(--line);
 }
 
 footer {
-  padding-top: 1.75rem;
+  padding-top: 1.65rem;
   border-top: 1px solid var(--line);
 }
 
 .delivery {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.7rem;
   font-size: 1.125rem;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .plain {
@@ -196,24 +228,25 @@ footer {
 
 @media (min-width: 48rem) {
   .wrap {
-    padding-top: 4.75rem;
-    padding-bottom: 5.5rem;
-  }
-
-  .masthead {
-    padding-bottom: 1.25rem;
+    padding-top: 3.25rem;
+    padding-bottom: 5rem;
   }
 
   h1 {
-    margin-top: 2rem;
-    margin-bottom: 1.35rem;
-    font-size: 2.2rem;
+    margin-top: 1.35rem;
+    font-size: 2rem;
+  }
+
+  .cover {
+    max-height: 17rem;
+    max-width: 16rem;
+    margin-top: 1.15rem;
   }
 
   .singles,
   .again,
   footer {
-    margin-top: 7rem;
+    margin-top: 6rem;
   }
 }
 
