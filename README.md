@@ -1,6 +1,8 @@
 # Parent Care File
 
-A static page for an adult child taking care of a parent. The first screen is the night itself: one person leaving, one staying. The line, the $97 price, and one button sit on that picture. The file itself is not shown.
+A static page for an adult child taking care of a parent. The first screen is two people at a kitchen table, the handoff line, $97, and one button. The file is two printable pages, the night and the desk. It is not shown.
+
+The kitchen photograph is by Tiger Lily on [Pexels](https://www.pexels.com/photo/brunette-women-sitting-by-table-in-kitchen-8260406/), used under the Pexels License.
 
 $97 for the whole file. Separately: Medication & Daily Log $37, Doctor & Insurance Sheet $32, One-Page ER Brief $37. Together those three are $106.
 
