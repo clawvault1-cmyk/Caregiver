@@ -7,10 +7,10 @@
 }
 
 :root {
-  color-scheme: light;
-  --navy: #132033;
-  --cream: #f6f1e6;
-  --line: rgba(19, 32, 51, 0.16);
+  color-scheme: dark;
+  --ink: #f3efe6;
+  --ground: #100f0d;
+  --quiet: #c9c2b6;
 }
 
 *,
@@ -19,137 +19,120 @@
   box-sizing: border-box;
 }
 
-html {
-  background: var(--cream);
+html,
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
 }
 
 body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--navy);
   font-family: "Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   font-size: 1.0625rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.45;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--navy);
-  color: var(--cream);
+  background: var(--ink);
+  color: var(--ground);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.wrap {
-  max-width: 34rem;
+main {
+  max-width: 28rem;
   margin: 0 auto;
-  padding: max(1.1rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right)) max(3.5rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
 }
 
-.masthead {
-  margin: 0;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid var(--line);
+.hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: max(1.15rem, env(safe-area-inset-top)) 1.15rem max(1.1rem, env(safe-area-inset-bottom));
+  overflow: hidden;
 }
 
-.masthead p {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  line-height: 1.3;
-  text-transform: uppercase;
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
-h1,
-h2,
-h3,
-p {
-  text-wrap: pretty;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(8, 7, 6, 0.62) 0%, rgba(8, 7, 6, 0.08) 24%, rgba(8, 7, 6, 0) 38%),
+    linear-gradient(to top, rgba(8, 7, 6, 0.78) 0%, rgba(8, 7, 6, 0.28) 22%, rgba(8, 7, 6, 0) 40%);
+  pointer-events: none;
+}
+
+.hero h1,
+.hero .buy {
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-  margin: 0.95rem 0 0.45rem;
-  font-size: 1.62rem;
-  font-weight: 500;
-  line-height: 1.18;
-  letter-spacing: -0.015em;
+  margin: 0;
+  max-width: 11em;
+  font-size: 2.05rem;
+  font-weight: 560;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
 }
 
 h2 {
-  margin: 0 0 2rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.25;
+  margin: 0 0 1.15rem;
+  font-size: 2.15rem;
+  font-weight: 560;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 h3 {
-  margin: 0 0 0.7rem;
-  font-size: 1.28rem;
+  margin: 0;
+  font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
-.who,
-.what,
-.keep {
-  margin: 0 0 0.75rem;
-}
-
-.hero .who {
-  margin: 0 0 0.15rem;
-}
-
-.what {
-  margin-bottom: 0;
-}
-
-.cover {
-  display: block;
-  width: auto;
-  max-width: min(15.5rem, 68%);
-  max-height: clamp(9.5rem, 28vh, 15.5rem);
-  margin: 0.7rem auto 0.15rem;
-  object-fit: contain;
-  box-shadow: 0 16px 36px rgba(19, 32, 51, 0.16);
-}
-
-.still {
-  display: block;
-  width: 100%;
-  height: auto;
+p {
   margin: 0 0 1rem;
-  box-shadow: 0 12px 30px rgba(19, 32, 51, 0.1);
 }
 
 .price {
-  margin: 0.75rem 0 0.25rem;
-  font-size: 1.85rem;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+  font-size: 2.15rem;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
 
-.sum {
-  margin: 0 0 0.8rem;
-  font-size: 0.98rem;
-  line-height: 1.4;
+.hero .price {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
 }
 
 .button {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0.95rem 1.15rem;
-  border: 1px solid var(--navy);
+  padding: 0.95rem 1rem;
+  border: 0;
   border-radius: 0;
-  background: var(--navy);
-  color: var(--cream);
-  font: 500 1.0625rem/1.2 "Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  background: var(--ink);
+  color: var(--ground);
+  font: 600 1.05rem/1.2 "Source Serif 4", Palatino, Georgia, serif;
   text-align: center;
   cursor: pointer;
   touch-action: manipulation;
@@ -157,101 +140,92 @@ h3 {
   appearance: none;
 }
 
-.button:active {
-  background: #0c1828;
+.button.quiet {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(243, 239, 230, 0.45);
+  font-weight: 500;
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--navy);
+  outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
 
-@media (hover: hover) {
-  .button:hover {
-    background: #0c1828;
-  }
+.button:active {
+  background: #fff;
+}
+
+.button.quiet:active {
+  background: var(--ink);
+  color: var(--ground);
 }
 
 .checkout-note {
   margin: 0;
   min-height: 0;
-  font-size: 0.975rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--quiet);
 }
 
 .checkout-note:not(:empty) {
-  margin-top: 0.85rem;
-}
-
-.inside {
-  margin-top: 3.25rem;
-}
-
-.keep {
-  margin-top: 0.15rem;
-  font-size: 1.125rem;
-  line-height: 1.4;
-}
-
-.singles,
-.again,
-footer {
-  margin-top: 4.75rem;
-}
-
-.singles .offer + .offer {
-  margin-top: 3.15rem;
-  padding-top: 3.15rem;
-  border-top: 1px solid var(--line);
-}
-
-footer {
-  padding-top: 1.65rem;
-  border-top: 1px solid var(--line);
-}
-
-.delivery {
-  margin: 0 0 0.7rem;
-  font-size: 1.125rem;
-  line-height: 1.4;
-}
-
-.plain {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.plain + .plain {
   margin-top: 0.75rem;
 }
 
-@media (min-width: 48rem) {
-  .wrap {
-    padding-top: 3.25rem;
-    padding-bottom: 5rem;
-  }
-
-  h1 {
-    margin-top: 1.35rem;
-    font-size: 2rem;
-  }
-
-  .cover {
-    max-height: 17rem;
-    max-width: 16rem;
-    margin-top: 1.15rem;
-  }
-
-  .singles,
-  .again,
-  footer {
-    margin-top: 6rem;
-  }
+.cost,
+.relief,
+.pieces,
+footer {
+  padding: 4.5rem 1.25rem 0;
 }
 
-@media (forced-colors: active) {
-  .button {
-    border: 1px solid ButtonText;
+.cost p,
+.relief p {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.pieces {
+  padding-bottom: 1rem;
+}
+
+.pieces article {
+  padding: 1.35rem 0;
+  border-top: 1px solid rgba(243, 239, 230, 0.16);
+}
+
+.amount {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sum {
+  margin: 0.5rem 0 0;
+  color: var(--quiet);
+  font-size: 1rem;
+}
+
+footer {
+  padding-bottom: max(3rem, env(safe-area-inset-bottom));
+}
+
+footer p {
+  margin: 0;
+  color: var(--quiet);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 48rem) {
+  main {
+    max-width: 40rem;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+    max-width: 14em;
   }
 }
