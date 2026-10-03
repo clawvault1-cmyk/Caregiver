@@ -1,6 +1,6 @@
 # Parent Care File
 
-A single static landing page for a parent care file. It is for an adult child taking care of a parent. The page is the store: who it is for, what the file does, the price, and one button.
+A single static landing page for a parent care file. It is for an adult child taking care of a parent. The first screen shows the cover, the price, and one button.
 
 No build step. No account. The folder is the site.
 
@@ -14,6 +14,8 @@ No build step. No account. The folder is the site.
 | One-Page ER Brief | $37 | One page a sibling or the ER can read. |
 
 The three files separately are $37 + $32 + $37 = $106.
+
+The cover is `images/cover.jpg`. The page beside a pill bottle and a pen is `images/page-bottle-pen.jpg`. Both were made for this page.
 
 ## Checkout
 

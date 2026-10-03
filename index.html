@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parent Care File</title>
-  <meta name="description" content="The file you wish you had at the last appointment. A practical file for an adult child taking care of a parent.">
+  <meta name="description" content="The last appointment. Nobody had the medication list. A practical file for an adult child taking care of a parent. $97.">
   <meta name="theme-color" content="#f6f1e6">
   <meta property="og:title" content="Parent Care File">
-  <meta property="og:description" content="The file you wish you had at the last appointment.">
+  <meta property="og:description" content="The last appointment. Nobody had the medication list.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23132033'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/cover.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,15 +22,19 @@
 
     <main>
       <section class="hero" aria-labelledby="headline">
-        <h1 id="headline">The file you wish you had at the last appointment.</h1>
-        <div class="offer">
-          <p class="who">For an adult child taking care of a parent.</p>
-          <p class="what">A medication list, a daily log, appointment notes, doctor and insurance contacts, and a one-page sheet a sibling or the ER can read.</p>
-          <p class="price">$97</p>
-          <p class="sum">Three files separately are $37&nbsp;+&nbsp;$32&nbsp;+&nbsp;$37&nbsp;=&nbsp;$106.</p>
-          <button type="button" class="button" data-product="parentCareFile">Get the $97 file</button>
-          <p class="checkout-note" role="status"></p>
-        </div>
+        <h1 id="headline">The last appointment.<br>Nobody had the medication list.</h1>
+        <p class="who">For an adult child taking care of a parent.</p>
+        <img class="cover" src="images/cover.jpg" width="864" height="1152" alt="The Parent Care File. A cream cover with a navy spine." fetchpriority="high">
+        <p class="price">$97</p>
+        <p class="sum">Three files separately are $37&nbsp;+&nbsp;$32&nbsp;+&nbsp;$37&nbsp;=&nbsp;$106.</p>
+        <button type="button" class="button" data-product="parentCareFile">Get the $97 file</button>
+        <p class="checkout-note" role="status"></p>
+      </section>
+
+      <section class="inside" aria-label="The page, kept with the medications">
+        <img class="still" src="images/page-bottle-pen.jpg" width="1152" height="864" alt="A page from the file next to a pill bottle and a pen.">
+        <p class="keep">Print it. Keep it with the medications.</p>
+        <p class="what">A medication list, a daily log, appointment notes, doctor and insurance contacts, and a one-page sheet a sibling or the ER can read.</p>
       </section>
 
       <section class="singles" aria-labelledby="pick-one">
@@ -78,7 +83,7 @@
     </main>
 
     <footer>
-      <p class="delivery">Instant PDF. Print it. Keep it with the medications.</p>
+      <p class="delivery">Instant PDF.</p>
       <p class="plain">You fill it in from what you already know. It is not medical advice.</p>
       <noscript>
         <p class="plain">Enable JavaScript to open checkout.</p>
