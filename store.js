@@ -27,7 +27,7 @@
           return;
         }
         var note = noteFor(button);
-        if (note) note.textContent = "Checkout for this file is not connected yet.";
+        if (note) note.textContent = "Checkout for this kit is not connected yet.";
       });
     })(buttons[i]);
   }

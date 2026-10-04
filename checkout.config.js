@@ -1,14 +1,8 @@
-// Paste a full https:// checkout URL for each file.
-// Leave any file you are not selling as an empty string.
-// This page has no card form. Buttons only open these URLs.
+// Paste a full https:// checkout URL for the kit.
+// Leave it as an empty string until a checkout link is ready.
+// This page has no card form. The button only opens that URL.
 //
-// parentCareFile        Parent Care File, $97
-// medicationDailyLog    Medication & Daily Log, $37
-// doctorInsuranceSheet  Doctor & Insurance Sheet, $32
-// onePageErBrief        One-Page ER Brief, $37
+// agingParentCareKit    The Aging Parent Care Kit, $24
 window.CHECKOUT_CONFIG = {
-  parentCareFile: "",
-  medicationDailyLog: "",
-  doctorInsuranceSheet: "",
-  onePageErBrief: ""
+  agingParentCareKit: ""
 };
