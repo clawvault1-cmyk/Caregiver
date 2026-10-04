@@ -1,8 +1,6 @@
 # The Aging Parent Care Kit
 
-A static page for one kit at $24. The first screen is the line “Less to remember. Easier to share.”, the short promise, a readable preview of a page, and one buy button.
-
-Seven printable tools. The page shows sample interior pages for essential information, a doctor visit, and a care handoff. It is not medical advice.
+A static page for one kit at $24. Same kind of page as Everyday Essentials: a title, one line, three covers, the price, and one buy button.
 
 ## Checkout
 
@@ -16,4 +14,4 @@ Host this folder as static files. `.nojekyll` is included for GitHub Pages.
 python3 -m http.server 8080
 ```
 
-Type is [Source Serif 4](https://github.com/adobe-fonts/source-serif), used under the SIL Open Font License. See `fonts/OFL.txt`.
+Fraunces and Source Sans 3 are used under the SIL Open Font License.
