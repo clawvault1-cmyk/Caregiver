@@ -8,14 +8,18 @@
   <meta name="theme-color" content="#100f0d">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23100f0d'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/kitchen-table.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <section class="hero">
-      <img src="images/the-night.jpg" alt="Night outside a parent's front door. One adult is getting into the car. The other has just arrived to stay, coat still on, a bag on the floor.">
-      <h1>Your sibling has to take tonight, and you are still the only copy.</h1>
-      <div class="buy">
+      <div class="hero-photo">
+        <img src="images/kitchen-table.jpg" alt="Two women at a kitchen table, looking at each other.">
+      </div>
+      <div class="hero-copy">
+        <h1>When they take tonight, they should not have to call you for every fact.</h1>
+        <p class="support">The night and the desk are already written down.</p>
         <p class="price">$97</p>
         <button type="button" class="button" data-product="parentCareFile">Get the $97 file</button>
         <p class="checkout-note" role="status"></p>
@@ -23,14 +27,14 @@
     </section>
 
     <section class="cost" id="cost">
-      <h2>The cost of being the only copy</h2>
-      <p>You spend the night on the phone, or you don’t pick up, and both of you guess. At the desk you recite from memory. The week you meant to mention is still at home.</p>
-      <p>The next time you need a night, you don’t hand it over. You cancel your own day. You look unprepared in front of your sibling, or in front of the person at the desk.</p>
+      <h2>They still have to call.</h2>
+      <p>A sibling, a spouse, or a sitter has the night, and the facts are still in you. You walk them through it from wherever you are. At the desk, you recite what you can remember.</p>
+      <p>The next time you need a night, you don’t hand it over. You cancel your own day.</p>
     </section>
 
     <section class="relief" id="relief">
-      <h2>Then you are not the only place it lives.</h2>
-      <p>A sibling can do the night without calling you for every detail. One page can be read without you narrating. You walk in from what you already kept, not from rebuilding the week in the parking lot.</p>
+      <h2>Then they can take it without you on the phone.</h2>
+      <p>The night and the desk are already written down. Someone else can do tonight, and can stand at the desk, without calling you for every fact.</p>
       <p class="price">$97</p>
       <button type="button" class="button" data-product="parentCareFile">Get the $97 file</button>
       <p class="checkout-note" role="status"></p>
@@ -61,6 +65,7 @@
 
     <footer>
       <p>You fill this in from what you already know. It does not treat anyone, prevent an event, or tell anyone what to give. It is not medical advice, not a device, and not a clinic.</p>
+      <p class="credit">Photograph by Tiger Lily on Pexels.</p>
     </footer>
   </main>
   <script src="checkout.config.js"></script>
